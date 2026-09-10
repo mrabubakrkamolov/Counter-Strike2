@@ -23,7 +23,6 @@ body {
   font-family: 'Exo 2', sans-serif;
   scroll-behavior: smooth;
   margin: 0;
-  place-items: center;
   min-height: 100vh;
 }
 

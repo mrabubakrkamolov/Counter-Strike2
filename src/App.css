@@ -46,7 +46,7 @@
 
 .about_main_img2 {
   position: absolute;
-  top: 83px;
+  top: 97px;
   right: 0;
   height: 10%;
   opacity: 0;
@@ -268,7 +268,7 @@ nav button img {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: 36.3%;
+  top: 41%;
   animation: 1s text;
   right: 0;
   z-index: 500;
