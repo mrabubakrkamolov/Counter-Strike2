@@ -3,17 +3,17 @@ import { NavLink, useRouteError } from "react-router-dom";
 function PageNotFound() {
   const error = useRouteError()
 
-  if(error.status === 404) {
+  if (error.status === 404) {
     return (
       <div className="pageNotFound-container">
-      <video className="background-video" autoPlay loop muted>
-        <source src='public\items\video\cs.mp4' type="video/mp4" />
-      </video>
-      <div className="content">
-        <h1>Page Not Found 404</h1>
+        <video className="background-video" autoPlay loop muted>
+          <source src="/items/video/cs.mp4" type="video/mp4" />
+        </video>
+        <div className="content">
+          <h1>Page Not Found 404</h1>
+        </div>
+        <NavLink to="/">Home Page</NavLink>
       </div>
-      <NavLink to="/">Home Page</NavLink>
-    </div>
     );
   } return (
     <div className="pageNotFound-container">
