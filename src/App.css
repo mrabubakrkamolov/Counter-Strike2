@@ -124,7 +124,7 @@ a:hover {
 }
 
 nav button {
-  background-color: #3281ac;
+  background-color: transparent;
   border-radius: 3px;
   transition: ease-in .2s;
 
@@ -136,16 +136,33 @@ nav button img {
   height: 20px;
 }
 
+
+
 #start_game_link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 5px 12px;
+  box-sizing: border-box;
+  background-color: #005a9c;
+  color: white;
   text-shadow: none;
   font-weight: 600;
   font-size: 17px;
-  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-#start_game:hover {
-  transform: translateY(0px);
-  background-color: #ffffff30;
+#start_game_link img {
+  width: 16%;
+}
+
+#start_game_link:hover {
+  background-color: #004477;
 }
 
 #start_game:hover #start_game_link {
