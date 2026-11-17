@@ -273,11 +273,19 @@ nav button img {
 }
 
 .support_container {
+  position: relative;
+
   background-image: url(https://navi.gg/img/footer-top-bg.png);
-  padding: 20px;
-  margin-top: 25%;
-  height: 70vh;
   background-color: #1e1d23;
+
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+
+  padding: 20px 20px 80px;
+  margin-top: 25%;
+
+  box-sizing: border-box;
 }
 
 .support_footer_img {
@@ -285,11 +293,11 @@ nav button img {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: 41%;
   animation: 1s text;
   right: 0;
   z-index: 500;
   width: 35%;
+  top: -12%;
   height: 35%;
 }
 
@@ -300,14 +308,14 @@ nav button img {
 .support_main_img img{
   width: 32%;
   position: absolute;
-  top: 105px;
+  top: -41.2%;
   animation-name: box-mover;
   animation-duration: 1s;
 }
 
 .support_main2_img{
   width: 50%;
-  top: 80px;
+  top: -40%;
   right: 0;
   height: 30%;
   position: absolute;
@@ -319,62 +327,169 @@ nav button img {
   animation-delay: 0.5s;
 }
 
-/* REPORT FORM */
-
-
+/* FORM LAYOUT */
 
 .form {
-  color: #eae9e5;
+  position: relative;
+  z-index: 2;
 
-}
-
-.form h2{
-  text-align: center;
-}
-
-.form-container { 
-  width: 50%;
-  max-width: 350px;
+  width: 100%;
+  max-width: 760px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 35px 25px 45px;
+
+  color: #eae9e5;
+  box-sizing: border-box;
 }
+
+.form h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.form-container form {
+  width: 100%;
+}
+
+/* Name + Email */
+
+.form-container form .form-control:nth-child(1),
+.form-container form .form-control:nth-child(2) {
+  display: inline-block;
+  width: calc(50% - 10px);
+  vertical-align: top;
+}
+
+.form-container form .form-control:nth-child(1) {
+  margin-right: 16px;
+}
+
+/* All other fields */
 
 .form-control {
-  display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 18px;
 }
 
 .form-control span {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.form-control input, textarea {
-  border-radius: 8px;
-  padding: 12px 8px;
-  font-family: inherit;
+.form-control input,
+.form-control textarea {
   width: 100%;
-  resize: none;
-  font-size: 20px;
+  box-sizing: border-box;
+
+  padding: 13px 15px;
+
+  border: 1px solid rgba(234, 233, 229, 0.3);
+  border-radius: 6px;
+
+  background: rgba(20, 21, 27, 0.9);
+  color: #eae9e5;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  outline: none;
+  transition: 0.2s ease;
 }
 
-.form_btn{
-  color: #eae9e5;
-  background-color: transparent;
-  border:  1px solid #eae9e5 !important;
-  border-radius: 8px;
-  transition: 0.5s;
+.form-control input {
+  height: 48px;
+}
+
+.form-control textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  border-color: #eae9e5;
+  box-shadow: 0 0 0 2px rgba(234, 233, 229, 0.06);
+}
+
+.form-control input::placeholder,
+.form-control textarea::placeholder {
+  color: #777;
+}
+
+/* Send button */
+
+.form_btn {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 3px;
+
+  border-radius: 6px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
 }
 
 .form_btn:hover {
-  background-color: #eae9e5;
-  color: #1e202f;
-  border:  1px solid #15171b !important;
-
+  transform: translateY(-1px);
 }
 
+/* Success / Error */
 
+.form-success,
+.form-error {
+  margin-top: 15px;
+  padding: 11px 15px;
 
+  text-align: center;
+  border-radius: 6px;
+
+  font-size: 14px;
+}
+
+.form-success {
+  color: #8ee6aa;
+  background: rgba(40, 120, 70, 0.12);
+  border: 1px solid rgba(80, 200, 120, 0.4);
+}
+
+.form-error {
+  color: #ff9b9b;
+  background: rgba(150, 30, 30, 0.12);
+  border: 1px solid rgba(255, 80, 80, 0.4);
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .form {
+    padding: 30px 18px 40px;
+  }
+
+  .form h2 {
+    font-size: 28px;
+  }
+
+  .form-container form .form-control:nth-child(1),
+  .form-container form .form-control:nth-child(2) {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+}
 /* FAQ */
 
 .faq_container {

@@ -195,7 +195,7 @@ function RootLayout() {
             <a href="https://www.youtube.com/@Valve">
               <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
             </a>
-            <a href="https://github.com/kus/cs2-modded-server?utm_source=chatgpt.com">
+            <a href="https://github.com/mrabubakrkamolov">
               <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
             </a>
           </div>
